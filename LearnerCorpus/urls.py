@@ -20,13 +20,16 @@ from django.conf.urls.static import static
 from django.conf import settings
 from rest_framework.urlpatterns import format_suffix_patterns
 from concordance import views
+from tribe import views
 
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^corpus/index', include('concordance.urls')),
-    url(r'^concordance/', views.ConcordanceList.as_view()),
+   # url(r'^concordance/', views.ConcordanceList.as_view()),
+    url(r'^stocks/', views.StockList.as_view()),
+    url(r'^tribes/', views.TribeList.as_view()),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

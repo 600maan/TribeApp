@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'concordance.apps.ConcordanceConfig',
+    'tribe.apps.TribeConfig',
+    # 'concordance.apps.ConcordanceConfig',
     'corsheaders',
 
 ]

@@ -1,4 +1,10 @@
 from django.db import models
+from django.conf import settings
+from rest_framework.reverse import reverse as api_reverse
+
+
+
+
 
 class Concordance(models.Model):
     search_word = models.CharField(max_length=50)
