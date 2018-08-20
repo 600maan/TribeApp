@@ -1,4 +1,4 @@
 # TribeApp
 
-python manage.py createsuperuser
+1) python manage.py createsuperuser
 
