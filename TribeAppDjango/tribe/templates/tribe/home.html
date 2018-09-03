@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en" itemscope itemtype="http://schema.org/MobileApplication">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+<head>
+    <meta charset="utf-8">
+    <title>Tribeapp - Create your tribe</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="theme-color" content="#2e3c54">
+    <meta name="msapplication-navbutton-color" content="#2e3c54">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Loads the path to your static files -->
+    {% load staticfiles %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'tribe/assets/css/layout.css' %}"/>
+    <script src="{% static 'tribe/assets/js/global.js' %}"></script>
+    <script src="{% static 'tribe/assets/js/marketing-reskin-178dc3cb3f.js' %}"></script>
+
+</head>
+<body class="page--section-builder">
+<header class="siteHeader" role="banner">
+    <div id="cookies-topbar" aria-hidden="false" data-topbar-name="cookiesEnabled" data-topbar-value="enabled"
+         class="topbar -is-active">
+        <a class="topbar-icon icon icon--x"></a>
+    </div>
+    <div id="i18n-404" aria-hidden="true" data-topbar-name="dismissi18n404topbar" data-topbar-value="dismissed"
+         class="topbar">
+            <span class="topbar-text">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="-white"><span class="js-language"></span></a>
+            </span>
+        <a class="topbar-icon icon icon--x"></a>
+    </div>
+    <div class="siteHeader-row">
+        <div class="siteHeader-logo-wrapper">
+            <img src="assets/logo.png" alt="" height="40"></a>
+        </div>
+        <div class="siteHeader-nav-wrapper">
+            <div class="siteHeader-nav row -small-end -small-middle">
+                <nav class="horizontalNavigation">
+                    <a href="#" class="horizontalNavigation-item">Create</a>
+                    <a href="#" class="horizontalNavigation-item">Explore</a>
+                    <a data-modal-open onclick="TribeappHelpers.showLoginModal()"
+                       class="horizontalNavigation-item hidden-logged-in" title="Log In" tabindex="7">Log In</a>
+                </nav>
+                <div class="siteHeader-buttons hidden-device-mobile">
+                    <div class="hidden-logged-in">
+                        <a data-modal-open href="#signup" class="siteHeader-button button -border" title="Sign up"
+                           tabindex="2">Sign up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobileNav-wrapper">
+            <a class="mobileNav-toggle">
+                <span></span>
+            </a>
+        </div>
+    </div>
+    <nav id="nav" class="mobileNav">
+        <div class="mobileNav-container">
+            <div class="mobileNav-content">
+                <ul>
+                    <li>
+                        <a href="#" title="create">Create</a>
+                    </li>
+                    <li>
+                        <a href="#" title="explore">Explore</a>
+                    </li>
+                </ul>
+                <div class="mobileNav-desktop-cta hidden-ios hidden-android">
+                    <a href="#signup" class="button -border -light -small">Get Started</a>
+                    <a href="#login">Log In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<script>
+    $(document).ready(function(){var e=$(".mobileNav-toggle");e.click(function(){$("html").toggleClass("-no-scroll"),e.toggleClass("-is-active"),$(".siteHeader").toggleClass("-mobile-nav-active"),$(".mobileNav").toggleClass("-is-active")})})
+
+
+
+
+
+</script>
+<section class="sectionBuilder -hero -first">
+    <div class="container">
+        <div class="row -spacing-3">
+            <div class="sm-10 sm-off-1 lg-8 lg-off-2 xxl-6 xxl-off-3">
+                <div class="textStack">
+                    <h4 class="-h3">
+                        Find and create your Tribe
+                    </h4>
+                    <p class="-large">
+                        Tribeapp is a collaboration discovery and mentorship platform
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xsmall-12 signupForm-homepage-center">
+                <form class="signupForm - hidden-ios hidden-android hidden-logged-in"
+                      onsubmit="return TribeappHelpers.signupWithEmail(this),!1">
+                    <div class="signupForm-container">
+                        <div class="signupForm-row">
+                            <!-- <div class="signupForm-email"> -->
+                            <!-- <input type="hidden" name="name" value=""> -->
+                            <!-- <input class="input input--email signup-email-" tabindex="" placeholder="name@company.com" name="email" type="email"> -->
+                            <!-- </div> -->
+                            <a href="#signup" class="button -large" title="Sign Up">
+                                Sign Up
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sectionBuilder -pt-0 -pb-0">
+    <div class="container -full-no-max">
+        <div class="row rotatingScreenshot -ta-center -no-gutters">
+            <div class="rotatingScreenshot-image js-rotatingScreenshot-screenshot -active">
+                <video class="videoAnimation" data-src="video.mp4" muted="true" poster="d6525b.png" loop>
+                </video>
+            </div>
+        </div>
+        <div class="row rotatingScreenshot-navigation js-rotatingScreenshot -no-gutters">
+            <div class="rotatingScreenshot-imageMobile">
+                <video class="videoAnimation" data-src="video.mp4" muted="true" poster="d6525b.png" loop>
+                </video>
+            </div>
+            <div class="rotatingScreenshot-toggle js-rotatingScreenshot-toggle -active -first">
+                <div class="textblock">
+                    <div class="textblock-content">
+                        <p class="textblock-title -large">
+                            Connect with people
+                        </p>
+                        <p class="textblock-body">
+                            First step in creating a tribe is to find people that you share a common connection with.
+                            You can create a tribe or join an existing tribe.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="rotatingScreenshot-toggle js-rotatingScreenshot-toggle -active">
+                <div class="textblock">
+                    <div class="textblock-content">
+                        <p class="textblock-title -large">
+                            Track your progress
+                        </p>
+                        <p class="textblock-body">
+                            Keep track of your progress within your tribe. You know where you stands and can keep
+                            everyone aligned on the tribe's core objectives.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="rotatingScreenshot-toggle js-rotatingScreenshot-toggle -active">
+                <div class="textblock">
+                    <div class="textblock-content">
+                        <p class="textblock-title -large">
+                            Meetups
+                        </p>
+                        <p class="textblock-body">
+                            One of the most important aspects in running a tribe is to meet regularly, we provide the
+                            tools to make tribe meetups simple and easy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sectionBuilder">
+    <div class="container">
+        <div class="row -align-items-center">
+            <div class="l-5-1off -spacing-3-mobile -small-last">
+                <section class="video -illustration" data-name="" data-id="fuayntu5xg">
+                    <img class="video-poster" src="74e19a.png" alt="" data-video-play>
+                    <div class="wistia_embed wistia_async_fuayntu5xg popover=true popoverContent=html silentAutoPlay=allow">
+                    </div>
+                </section>
+            </div>
+            <div class="col-small-4 col-small-offset-1 col-xlarge-3 col-xlarge-offset-2">
+                <div class="textStack">
+                    <h4 class="">
+                        Find your tribe on Tribeapp
+                    </h4>
+                    <p class="-large">
+                        There is a tribe for everyone
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<footer class="siteFooter -mini">
+    <div class="siteFooter-logo">
+        <a href="index4dd6.html?noredirect" class="-white icon icon--dots"></a>
+    </div>
+</footer>
+<footer class="siteFooter">
+    <div class="siteFooter-main-wrapper">
+        <div class="container -footer">
+            <div class="siteFooter-links">
+                © 2018 Tribeapp.io
+            </div>
+        </div>
+    </div>
+</footer>
+<!--Login Section for tribeapp -->
+<div id="login" class="modal -login" tabindex="61" data-swiftype-index="false">
+    <a data-modal-close href="#close" class="modal-logo"></a>
+    <a data-modal-close href="#close" class="modal-close modal-close-background"></a>
+    <div class="modal-container">
+        <a data-modal-close href="#close" class="modal-close icon icon--x" tabindex="71"></a>
+        <h3 class="modal-header">Log in</h3>
+        <div class="modal-content">
+            <button class="oauth -large"
+                    onclick='TribeappHelpers.trackEvent("login_google_auth"),TribeappHelpers.signupWithGoogle()'
+                    title="Use Google Account" tabindex="62">
+                  <span class="oauth-icon">
+                     <svg class="icon-svg icon-svg--google icon--" width="26" height="26" viewbox="0 0 32 32"
+                          preserveAspectRatio="xMinYMin">
+                        <use xlink:href="assets/svg/icons.svg#icon--google"></use>
+                     </svg>
+                  </span>
+                Use Google Account
+            </button>
+            <div class="form-option">or</div>
+            <div id="loginForm-modal-login" class="login">
+<!--                <form action="/tribeapp/userlogin/" method="post" id="login-form-modal-login">
+                    {% csrf_token %}-->
+                    <div class="input-group">
+                        <label >Email Address</label>
+                        <input id="email_login" class="input" tabindex="63" name="email" type="text">
+                    </div>
+                    <div class="input-group">
+                        <label >Username</label>
+                        <input id="username_login" class="input" tabindex="63" name="username" type="text"
+                               required>
+                    </div>
+                    <div class="input-group">
+                        <label >Password</label>
+                        <input id="password_login" class="input" tabindex="64" name="password"
+                               type="password">
+                    </div>
+
+                    <div class="login-submit">
+                        <button class="login-submit"
+                                title="Log In" onclick="tribeApp.loginUser()">
+                            Log In
+                        </button>
+                    </div>
+
+<!--                    <div class="login-submit">
+                        <input type="submit" id="login-submit-modal-login" class="button -large" tabindex="65"
+                               value="Log In">
+                    </div>
+                </form>-->
+                <p class="modal-helper-link">
+                    <a href="#" tabindex="66">
+                        Forgot password?
+                    </a>
+                </p>
+            </div>
+            <p class="modal-signup-link" tabindex="67">Don&#8217;t have an account? <a href="#signup">Sign Up</a></p>
+        </div>
+    </div>
+</div>
+<!--Signup Section for tribeapp -->
+<div id="signup" class="modal -signup" tabindex="70" data-swiftype-index="false">
+    <a data-modal-close href="#close" class="modal-logo"></a>
+    <a data-modal-close href="#close" class="modal-close modal-close-background"></a>
+    <div class="modal-container">
+        <a data-modal-close href="#close" class="modal-close icon icon--x" tabindex="80"></a>
+        <h3 class="modal-header">Sign Up</h3>
+        <div class="modal-content">
+            <p>If you connect with your institution, you can connect with them in tribeapp.</p>
+
+            <!--<form class="form-horizontal" role="form" action="/tribeapp/register/" method="post" enctype="multipart/form-data">-->
+            {% csrf_token %}
+
+            <div class="signupForm-container -center">
+                <div class="signupForm-row">
+                    <div class="input-group">
+                        <label>Username</label>
+                        <input class="input" tabindex="63" id="username_signup" name="username"
+                               type="text">
+                    </div>
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input class="input" tabindex="63" id="email_signup" name="email"
+                               type="email" placeholder="xyz@xyz.com">
+                    </div>
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input class="input" tabindex="63" id="password_signup" name="password"
+                               type="password" placeholder="Password">
+                    </div>
+                    <button class="signupForm-submit submit -large signup-submit-modal-signup"
+                            title="Sign Up" onclick="tribeApp.createUser()">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+
+            <!--</form>-->
+            <p class="modal-legal -small">By clicking sign up, I agree to the tribeapp <a
+                    href="terms.html#privacy-policy">Privacy Policy</a> and <a href="terms.html#terms-of-service">Terms
+                of Service</a>.</p>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'tribe/assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'tribe/assets/js/popper.min.js' %}"></script>
+<script src="{% static 'tribe/assets/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'tribe/assets/js/modernizr.min.js' %}"></script>
+<script src="{% static 'tribe/assets/js/waves.js' %}"></script>
+<script src="{% static 'tribe/assets/js/jquery.slimscroll.js' %}"></script>
+<script src="{% static 'tribe/assets/js/jquery.nicescroll.js' %}"></script>
+<script src="{% static 'tribe/assets/js/jquery.scrollTo.min.js' %}"></script>
+
+<script type="text/javascript">
+// using jQuery
+let csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+window.csrfToken = csrftoken;
+</script>
+
+<!-- jQuery  -->
+<script src="{% static 'tribe/Scripts/Utils.js' %}"></script>
+
+</body>
+</html>

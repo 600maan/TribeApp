@@ -1,0 +1,81 @@
+{% extends 'tribe/base_Create.html' %}
+
+
+{% block body %}
+<div class="wrapper">
+    <div class="container-fluid">
+
+        <!-- Page-Title -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-title-box">
+                    <h4 class="page-title">Create your first tribe</h4>
+                </div>
+            </div>
+        </div>
+        <!-- end page title end breadcrumb -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card m-b-30">
+                    <div class="card-body">
+                        <p class="text-muted m-b-30 font-14">Fill in the details to create your first tribe</p>
+
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-sm-2 col-form-label">Name of the tribe</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="text" value="" id="tribe_name">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Number of members</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="tribe_member_count">
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="example-search-input" class="col-sm-2 col-form-label">Description</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="Description" value="" id="tribe_description">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="example-email-input" class="col-sm-2 col-form-label">Location</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="Location" value="" id="tribe_location">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="example-url-input" class="col-sm-2 col-form-label">Tags</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="Tags" value="" id="tribe_tags">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="example-url-input" class="col-sm-2 col-form-label">Logo</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="file" value="" id="tribe_logo">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="offset-sm-2">
+                                <button class="btn btn-lg btn-danger createbutton" type="submit"
+                                        onclick="tribeApp.createTribe()">Create
+                                </button>
+                                <button class="btn btn-lg btn-secondary createbutton" type="submit">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col -->
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+</div>
+{% endblock %}

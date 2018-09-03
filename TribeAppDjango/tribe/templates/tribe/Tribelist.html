@@ -1,0 +1,38 @@
+{% extends 'tribe/base_Tribelist.html' %}
+
+{% block body %}
+
+<div class="wrapper">
+    <div class="container-fluid">
+
+        <!-- Page-Title -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-title-box">
+                    <div class="input-group mt-2">
+                                <span class="input-group-prepend">
+                                    <button type="button" class="btn btn-success"><i class="fa fa-search"></i></button>
+                                </span>
+                        <input type="text" id="example-input1-group2" name="example-input1-group2" class="form-control"
+                               placeholder="Search">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- end page title end breadcrumb -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card m-b-30">
+                    <div class="card-body" id="tribe_list_area">
+
+
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+</div>
+
+{% endblock %}
+

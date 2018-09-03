@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>TribeApp - Create your tribe</title>
+    <meta content="Create your tribe" name="description"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <!-- Loads the path to your static files -->
+    {% load staticfiles %}
+
+    <link rel="shortcut icon" href="{% static 'tribe/assets/images/favicon.ico' %}"/>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'tribe/assets/css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'tribe/assets/css/icons.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'tribe/assets/css/style.css' %}"/>
+
+
+</head>
+
+
+<body>
+<!-- Check if the user is logged in or not -->
+{% if user.is_authenticated %}
+<li>User: {{ user.username }}</li>
+<input id="loggedinuserid" name="loggedinuserid" type="hidden" value={{ user.id }}>
+
+<!-- Loader -->
+<div id="preloader">
+    <div id="status">
+        <div class="spinner"></div>
+    </div>
+</div>
+
+<!-- Navigation Bar-->
+<header id="topnav">
+    <div class="topbar-main">
+        <div class="container-fluid">
+
+            <!-- Logo container-->
+            <div class="logo">
+                <a href="#" class="logo">
+                    <img src="assets/images/logo-sm.png" alt="" height="40" class="logo-small">
+                    <img src="assets/images/logo.png" alt="" height="40" class="logo-large">
+                </a>
+            </div>
+            <!-- End Logo container-->
+
+
+            <div class="menu-extras topbar-custom">
+
+                <ul class="list-inline float-right mb-0">
+                    <!-- User-->
+                    <li class="list-inline-item dropdown notification-list">
+                        <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown"
+                           href="#" role="button"
+                           aria-haspopup="false" aria-expanded="false">
+                            <img src="{% static 'tribe/assets/images/users/avatar-1.jpg' %}" alt="user"
+                                 class="rounded-circle">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                            <!-- item-->
+                            <div class="dropdown-item noti-title">
+                                <h5>Welcome ( {{ user.get_username }} )</h5>
+                            </div>
+                            <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle m-r-5 text-muted"></i>
+                                Profile</a>
+                            <a class="dropdown-item" href="#"><i class="mdi mdi-settings m-r-5 text-muted"></i> Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/tribeapp/accounts/logout/"><i
+                                    class="mdi mdi-logout m-r-5 text-muted"></i> Logout</a>
+                        </div>
+                    </li>
+                    <li class="menu-item list-inline-item">
+                        <!-- Mobile menu toggle-->
+                        <a class="navbar-toggle nav-link">
+                            <div class="lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                        <!-- End mobile menu toggle-->
+                    </li>
+
+                </ul>
+            </div>
+            <!-- end menu-extras -->
+
+            <div class="clearfix"></div>
+
+        </div> <!-- end container -->
+    </div>
+    <!-- end topbar-main -->
+
+    <!-- MENU Start -->
+    <div class="navbar-custom">
+        <div class="container-fluid">
+            <div id="navigation">
+                <!-- Navigation Menu-->
+                <ul class="navigation-menu">
+
+                    <li class="has-submenu">
+                        <a href="/tribeapp/create"><i class="mdi mdi-airplay"></i>Create</a>
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="/tribeapp/list"><i class="mdi mdi-layers"></i>Explore</a>
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="/tribeapp/mylist"><i class="mdi mdi-bullseye"></i>My tribes</a>
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="#"><i class="mdi mdi-gauge"></i>Profile</a>
+                    </li>
+
+                </ul>
+                <!-- End navigation menu -->
+            </div> <!-- end #navigation -->
+        </div> <!-- end container -->
+    </div> <!-- end navbar-custom -->
+</header>
+<!-- End Navigation Bar-->
+
+
+{% block body %}
+{% endblock %}
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                © 2018 Tribeapp.io
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+
+<!--<li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>-->
+{% else %}
+<div> User not logged in Please Login.... </div>
+<li><a href="/tribeapp/index/">Login</a></li>
+{% endif %}
+
+
+
+<script src="{% static 'tribe/assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'tribe/assets/js/popper.min.js' %}"></script>
+<script src="{% static 'tribe/assets/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'tribe/assets/js/modernizr.min.js' %}"></script>
+<script src="{% static 'tribe/assets/js/waves.js' %}"></script>
+<script src="{% static 'tribe/assets/js/jquery.slimscroll.js' %}"></script>
+<script src="{% static 'tribe/assets/js/jquery.nicescroll.js' %}"></script>
+<script src="{% static 'tribe/assets/js/jquery.scrollTo.min.js' %}"></script>
+
+<!-- App js -->
+<script src="{% static 'tribe/assets/js/app.js' %}"></script>
+<script type="text/javascript">
+// using jQuery
+let csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+window.csrfToken = csrftoken;
+</script>
+
+<!-- jQuery  -->
+<script src="{% static 'tribe/Scripts/Utils.js' %}"></script>
+
+<script>
+    $(document).ready(
+        // Get list of my tribes
+        tribeApp.getMyTribes(
+            function(data) {
+                tribeApp.displayMyTribes(data);
+            }
+        )
+    );
+</script>
+</body>
+</html>
